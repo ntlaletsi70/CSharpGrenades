@@ -1,0 +1,41 @@
+﻿<Page x:Class="CSharpGrenadesGASource.PL.Documentation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CSharpGrenadesGASource"
+      mc:Ignorable="d" 
+      d:DesignHeight="1200" d:DesignWidth="1000"
+      Title="Documentation">
+
+    <Grid Margin="10,0,0,52" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="948*" />
+            <ColumnDefinition Width="238*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lstDocs" Grid.Column="1" Background="YellowGreen" Margin="0,36,0,0" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem>
+                <TextBlock Text="Introductory" Foreground="White"/>
+
+            </ListBoxItem>
+            <ListBoxItem>
+                <TextBlock Text="Requirements Specifications" Foreground="White"/>
+
+            </ListBoxItem>
+            <ListBoxItem>
+                <TextBlock Text="Analysis Design" Foreground="White"/>
+
+            </ListBoxItem>
+            <ListBoxItem>
+                <TextBlock Text="Uml Diagrams" Foreground="White"/>
+
+            </ListBoxItem>
+        </ListBox>
+        <WebBrowser Name="browser" Margin="0,36,0,0" Visibility="Hidden"/>
+        <Label  HorizontalContentAlignment="Center" Height="28" Foreground="White" FontFamily="Georgia" HorizontalAlignment="Left" Margin="420,0,0,0" Name="labelCaption" VerticalAlignment="Top" Width="221" />
+
+
+    </Grid>
+</Page>

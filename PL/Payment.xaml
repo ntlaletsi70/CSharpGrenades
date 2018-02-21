@@ -1,0 +1,57 @@
+﻿<Page x:Class="CSharpGrenadesGASource.PL.Payment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CSharpGrenadesGASource"
+      mc:Ignorable="d" 
+      d:DesignHeight="850" d:DesignWidth="1300"
+      Title="Food">
+
+    <Grid Height="800" Width="850">
+
+
+
+
+        <materialDesign:ColorZone  Height="850" Width="1300" Background="#FF2397F3 " 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="4">
+            <ListView x:Name="listOrders" HorizontalAlignment="Left" Height="511" Margin="37,41,0,0" VerticalAlignment="Top" Width="532" Loaded="listOrders_Loaded">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+
+
+
+        </materialDesign:ColorZone>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Name="btnCash" Margin="39,652,711,116" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="btnCash_Click"  >
+            Cash
+        </Button>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Name="btnDebit" Margin="251,652,499,116" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="btnDebit_Click"  >
+            Debit
+        </Button>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Name="btnCredit" Margin="459,652,291,116" Width="100"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="btnCredit_Click" >
+            Credit
+        </Button>
+
+
+
+        <Button ToolTip="PrintSlip" Width="250" Height="150"  Background="#FF2397F3" Name="btnPrint" Margin="590,48,10,602" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}">
+            <materialDesign:PackIcon Kind="Printer" Height="50" Width="50"/>
+        </Button>
+        <materialDesign:Snackbar Width="1000" IsActive="False"
+                                              x:Name="SnackbarTwo" >
+            <materialDesign:SnackbarMessage Content="Hello 2" ActionContent="UNDO" />
+        </materialDesign:Snackbar>
+    </Grid>
+
+</Page>

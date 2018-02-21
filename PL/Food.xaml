@@ -1,0 +1,264 @@
+﻿<Page x:Class="CSharpGrenadesGASource.PL.Food"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CSharpGrenadesGASource"
+      mc:Ignorable="d" 
+      d:DesignHeight="850" d:DesignWidth="1300"
+      Title="Food" Loaded="Page_Loaded">
+
+    <Grid >
+
+
+
+
+        <materialDesign:ColorZone Height="850" Background="Purple" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="4">
+
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0" >
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="239" />
+                        <ColumnDefinition Width="239" />
+                        <ColumnDefinition Width="239" />
+                        <ColumnDefinition Width="239" />
+                        <ColumnDefinition Width="124"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+
+                    </Grid.RowDefinitions>
+
+                    <materialDesign:Card Margin="10,10,0,0" Name="Dinner" Height="246" Grid.RowSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="140" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image  Stretch="Fill" Source="/CSharpGrenadesGASource;component/Images/lunch.jpg" />
+                            <StackPanel Grid.Row="1" Margin="6,0,10,0" >
+                                <TextBlock FontWeight="Bold">Lunch</TextBlock>
+                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">Some lunch meals for you when you at work.</TextBlock>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="ShareVariant" />
+                                </Button>
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="Heart" />
+                                </Button>
+                                <materialDesign:PopupBox Style="{StaticResource MaterialDesignToolPopupBox}" Padding="2 0 2 0">
+                                    <StackPanel>
+                                        <Button Content="More"/>
+                                        <Button Content="Options"/>
+                                    </StackPanel>
+                                </materialDesign:PopupBox>
+                            </StackPanel>
+                            <Button x:Name="btnLunchOpen" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="219" Height="188" Grid.RowSpan="2" Click="btnLunchOpen_Click" BorderBrush="Transparent"/>
+                        </Grid>
+                    </materialDesign:Card>
+
+                    <materialDesign:Card Margin="10,10,0,0" Name="Lunch" Grid.Column="1" Height="246" Grid.RowSpan="2">
+                        <Grid Margin="0,0,-10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="140" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image  Stretch="Fill" Source="/CSharpGrenadesGASource;component/Images/dinner.jpg" />
+                            <StackPanel Grid.Row="1" Margin="6,0,10,0" >
+                                <TextBlock FontWeight="Bold">Dinner</TextBlock>
+                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,10,0">Meals to fullfil your hunger at the end of a very long day.</TextBlock>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="ShareVariant" />
+                                </Button>
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="Heart" />
+                                </Button>
+                                <materialDesign:PopupBox Style="{StaticResource MaterialDesignToolPopupBox}" Padding="2 0 2 0">
+                                    <StackPanel>
+                                        <Button Content="More"/>
+                                        <Button Content="Options"/>
+                                    </StackPanel>
+                                </materialDesign:PopupBox>
+                            </StackPanel>
+                            <Button x:Name="btnDinnerOpen" BorderBrush="Transparent" Background="Transparent"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Height="188" Grid.RowSpan="2" Click="btnDinnerOpen_Click_1"/>
+                        </Grid>
+                    </materialDesign:Card>
+
+                    <materialDesign:Card Margin="10,10,0,0" Name="aa" Grid.Column="2" Height="246" Grid.RowSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="140" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image Stretch="Fill" Source="/CSharpGrenadesGASource;component/Images/drinks.jpg"/>
+                            <StackPanel Grid.Row="1" Margin="6,0,10,0">
+                                <TextBlock FontWeight="Bold">Beverage</TextBlock>
+                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">Refreshments and energy drink to cool or warm yourself.</TextBlock>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="ShareVariant" />
+                                </Button>
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="Heart" />
+                                </Button>
+                                <materialDesign:PopupBox Style="{StaticResource MaterialDesignToolPopupBox}" Padding="2 0 2 0">
+                                    <StackPanel>
+                                        <Button Content="More"/>
+                                        <Button Content="Options"/>
+                                    </StackPanel>
+                                </materialDesign:PopupBox>
+                            </StackPanel>
+                            <Button x:Name="btnBeverageOpen" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Height="188" Grid.RowSpan="2" Margin="0,0,-2,0" Click="btnBeverageOpen_Click_1"/>
+                        </Grid>
+                    </materialDesign:Card>
+                    <materialDesign:Card x:Name="BreakFast" Height="246" Grid.Column="3" Margin="10,10,0,0" Grid.RowSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="140" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image  Stretch="Fill" Source="/CSharpGrenadesGASource;component/Images/breakfast.jpg" />
+                            <StackPanel Grid.Row="1" Margin="6,0,10,0" >
+                                <TextBlock FontWeight="Bold"><Run Text="BreakFast"/></TextBlock>
+                                <TextBlock TextWrapping="Wrap" VerticalAlignment="Center"><Run Text="Importan meal of the day, have a look at our range and try one."/></TextBlock>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                    				materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="ShareVariant" />
+                                </Button>
+                                <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                    				materialDesign:RippleAssist.IsCentered="True">
+                                    <materialDesign:PackIcon Kind="Heart" />
+                                </Button>
+                                <materialDesign:PopupBox Style="{StaticResource MaterialDesignToolPopupBox}" Padding="2 0 2 0">
+                                    <StackPanel>
+                                        <Button Content="More"/>
+                                        <Button Content="Options"/>
+                                    </StackPanel>
+                                </materialDesign:PopupBox>
+                            </StackPanel>
+                            <Button x:Name="btnBreakFastOpen"  Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Height="188" Grid.RowSpan="2" Margin="0,0,-2,0" Click="btnBreakFastOpen_Click"/>
+                        </Grid>
+                    </materialDesign:Card>
+
+
+                    <materialDesign:ColorZone Margin="20,68,0,0" Height="352" Background="LightCyan" 
+                    	materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                    	CornerRadius="20" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                        <Grid HorizontalAlignment="Left" Height="217" Margin="10,125,0,0" VerticalAlignment="Top" Width="438"/>
+                    </materialDesign:ColorZone>
+                    <materialDesign:ColorZone Margin="0,68,0,0" Height="352" Background="LightCyan" 
+                    	materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                    	CornerRadius="20" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="455">
+                        <Grid HorizontalAlignment="Left" Height="332" Margin="10,10,0,0" VerticalAlignment="Top" Width="445">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="207*"/>
+                                <RowDefinition Height="125*"/>
+                            </Grid.RowDefinitions>
+                            <ListView x:Name="listOrders" ScrollViewer.HorizontalScrollBarVisibility= "Hidden" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="173" VerticalAlignment="Bottom" Width="431" Margin="0,0,0,5" Loaded="listOrders_Loaded" BorderBrush="#89BD1F1F">
+                                <ListView.Background>
+                                    <ImageBrush/>
+                                </ListView.Background>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Quantity" DisplayMemberBinding="{Binding NumberOfItems}"  Width="100"/>
+
+                                        <GridViewColumn Header="Name " DisplayMemberBinding="{Binding Name}"  Width="240"/>
+
+                                        <GridViewColumn Header="Price " DisplayMemberBinding="{Binding Price}"  Width="100"/>
+                                    </GridView>
+                                </ListView.View>
+
+                            </ListView>
+                            <Button x:Name="btnComfirmOrder"   Style="{StaticResource MaterialDesignFloatingActionDarkButton}" ToolTip="Confirm your Order"
+                                    Content="Confirm" HorizontalAlignment="Left" Margin="34,78,0,0" VerticalAlignment="Top" Width="68" Height="43" Click="btnComfirmOrder_Click" Grid.Row="1"/>
+                            <Button x:Name="btnRemoveItem" ToolTip="Remove an Item from your order"
+                                    Content="Remove Item"   Style="{StaticResource MaterialDesignFloatingActionDarkButton}" HorizontalAlignment="Left" Margin="130,78,0,0"
+                                    VerticalAlignment="Top" Width="80" Height="43" Click="btnRemoveItem_Click" Grid.Row="1"/>
+                            <Label x:Name="lblTotal" Content="Total:" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" RenderTransformOrigin="0.5,1.346"/>
+                            <Button x:Name="btnExit" ToolTip="Exit Restaurant"
+                                    Content="Exit"   Style="{StaticResource MaterialDesignFloatingActionDarkButton}" 
+                                    HorizontalAlignment="Left" Margin="350,78,0,0" VerticalAlignment="Top" Width="85" Height="43"  Grid.Row="1" Click="btnExit_Click"/>
+                            <Label x:Name="label1" FontSize="18" Content="Order List Items" HorizontalAlignment="Left"
+                                   Margin="10,0,0,0" VerticalAlignment="Top" Width="200"/>
+                            <Button x:Name="btnOrderChange" ToolTip="Delete The whole Order" Content="Remove Order"   Style="{StaticResource MaterialDesignFloatingActionDarkButton}"  HorizontalAlignment="Left" Margin="239,78,0,0" VerticalAlignment="Top" Width="85" Height="43" Click="btnOrderChange_Click" Grid.Row="1"/>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Grid HorizontalAlignment="Left" Height="342" Margin="20,68,0,0" VerticalAlignment="Top" Width="687" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                        <materialDesign:ColorZone Margin="10,10,241,0" Height="108" Background="White" 
+                    		materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                    		CornerRadius="20">
+                            <Grid HorizontalAlignment="Left" Height="88" Margin="10,10,0,0" VerticalAlignment="Top" Width="530">
+                                <Image x:Name="ImageFood" Stretch="Fill" HorizontalAlignment="Left" Height="78" VerticalAlignment="Top" Width="76" Margin="10,0,0,0"/>
+
+                                <TextBlock x:Name="txtSetNameFood" HorizontalAlignment="Center" FontFamily="RobotoFonts" FontSize="30" Margin="91,26,104,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="335"/>
+                            </Grid>
+                        </materialDesign:ColorZone>
+                        <TextBlock Name="txtSetLunch" FontFamily="RobotoFonts" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="138,32,548,274" Width="1" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <ListView x:Name="listFoodOrders" Background="Aqua"  HorizontalAlignment="Left" Height="210" Margin="10,132,0,0" VerticalAlignment="Top" Width="424" SelectionChanged="listFoodOrders_SelectionChanged_2" PreviewMouseLeftButtonDown="listFoodOrders_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="listFoodOrders_PreviewMouseLeftButtonUp">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Picture"  Width="110">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Image Source="{Binding Path=Image}" Height="70" Width="70" Stretch="Fill">
+                                                </Image>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Name " DisplayMemberBinding="{Binding Name}"  Width="200"/>
+
+                                    <GridViewColumn Header="Price " DisplayMemberBinding="{Binding Price}"  Width="70"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                       <!-- <TextBlock x:Name="lbTotalOrdered" HorizontalAlignment="Left" Margin="532,179,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="139"/> -->
+                    </Grid>
+                </Grid>
+            </StackPanel>
+
+
+        </materialDesign:ColorZone>
+
+        <materialDesign:Snackbar Width="1000" Margin="20 0 0 0" IsActive="False"
+                                              x:Name="SnackbarFood" >
+            <materialDesign:SnackbarMessage Content="Hello 2"/>
+        </materialDesign:Snackbar>
+
+    </Grid>
+
+
+
+</Page>

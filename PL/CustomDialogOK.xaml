@@ -1,0 +1,31 @@
+﻿<Window x:Class="CSharpGrenadesGASource.PL.CustomDialogOK"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpGrenadesGASource"
+        mc:Ignorable="d"
+        Topmost="True"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        BorderBrush="Transparent"
+        Background="Transparent"
+        Title="Dialog Ok" Height="296.5" Width="473" Margin="0 600 0 0" >
+
+    <Grid Background="Transparent" Margin="24,99,34,77" >
+
+
+        <materialDesign:ColorZone  Height="121" Background="White"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="5" Margin="0,0,0,0">
+            <Label x:Name="lbSetMessageDialogOK" 
+                Content="Order Selected Item Quantity" FontFamily="RobotoFonts" FontSize="20" HorizontalAlignment="Left" Margin="28,26,0,0" VerticalAlignment="Top"/>
+
+
+        </materialDesign:ColorZone>
+        <Button x:Name="btnOkDialog" Background="Transparent" Foreground="Gray" BorderBrush="Transparent" Content="OK" HorizontalAlignment="Left" Margin="329,78,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="-0.178,0.484" Click="btnOkDialog_Click"/>
+
+    </Grid>
+</Window>

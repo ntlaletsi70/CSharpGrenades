@@ -1,0 +1,111 @@
+﻿<Window x:Class="CSharpGrenadesGASource.PL.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpGrenadesGASource"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="Register" Height="640" Width="650">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="135*"/>
+        </Grid.ColumnDefinitions>
+
+        <materialDesign:ColorZone  Height="610" Width="620" Background="#FF2397F3 " Margin="11,15,11,-1"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="7" Grid.ColumnSpan="2">
+            <StackPanel  >
+
+                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" FontSize="18" TextWrapping="Wrap" Width="auto" FontWeight="Bold" HorizontalAlignment="Center">Register Screen</TextBlock>
+
+                <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch" HorizontalAlignment="Center" Height="190" Width="190" Background="White" CornerRadius="20" Margin="60 10 60 -10">
+                    <materialDesign:PackIcon Kind="AccountCircle" Height="190" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </materialDesign:ColorZone>
+
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtUserName" Background="White" 
+                 Margin="60 40 60 -20">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Account" />
+                            <TextBlock Text="Enter your UserName"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtFirstName" Background="White" 
+                 Margin="60 40 60 -8">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Account" />
+                            <TextBlock Text="Enter your first name"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtLastName" Background="White" 
+                 Margin="60 20 60 -8">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Account" />
+                            <TextBlock Text="Enter your last name"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  Name="txtPassword" Background="White"
+                Margin="60 20 60 -10">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Key" />
+                            <TextBlock Text="Enter your Password"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  Name="txtReEnterPassword" Background="White"
+                Margin="60 20 60 10">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Key" />
+                            <TextBlock Text="Re-enter your Password"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+
+
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                	    Margin="70,0,154,0"
+                		Width="auto"
+                		x:Name="btRegisterSubmit"
+                		ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="REGISTER" Click="btRegisterSubmit_Click"/>
+
+
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                		Margin="160,0,154,0"
+                		Width="auto"
+                		x:Name="btRegisterCancel"
+                		ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="CANCEL" Click="btRegisterCancel_Click"/>
+
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+        </materialDesign:ColorZone>
+    </Grid>
+</Window>

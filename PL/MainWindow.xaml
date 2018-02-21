@@ -1,0 +1,143 @@
+﻿<Controls:MetroWindow 
+        x:Class="CSharpGrenadesGASource.PL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+        xmlns:local="clr-namespace:CSharpGrenadesGASource"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        ShowTitleBar="True"   Title="C# GRENADES" MinWidth="1024" MinHeight="768"
+        mc:Ignorable="d"
+         
+  
+        Background="{DynamicResource MaterialDesignPaper}"
+         Height="768" Width="1024"
+                       BorderThickness="0" 
+                      GlowBrush="Black"
+    
+                      ResizeMode="NoResize"
+                      WindowTransitionsEnabled="False"
+                      WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded" >
+
+    <materialDesign:DrawerHost HorizontalAlignment="Stretch"  Name="MaterialDrawer" VerticalAlignment="Stretch" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0,0,0,-1" >
+        <materialDesign:DrawerHost.LeftDrawerContent>
+            <StackPanel Margin="16">
+                <Button Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}"
+                        Margin="4" HorizontalAlignment="Center"
+                       Background="#FF2397F3"
+                    Style="{DynamicResource MaterialDesignFlatButton}">
+                    <materialDesign:PackIcon Kind="Close" Height="20" Width="10"/>
+                </Button>
+
+                <Button ToolTip="Home" Width="200" Height="60" Margin=" 0 10 0 10" Click="Home_Click" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/home.jpg"/>
+                    </Button.Background>
+                </Button>
+
+                <Button ToolTip="Student Management" Width="200" Height="60" Margin=" 0 10 0 10" Click="Button_Click_2" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/student.jpg"/>
+                    </Button.Background>
+
+                </Button>
+
+                <Button ToolTip="Restaurant" Width="200" Height="60" Margin=" 0 10 0 10" Click="Button_Click" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/food.jpg"/>
+                    </Button.Background>
+
+                </Button>
+
+
+                <Button ToolTip="Documentation" Width="200" Height="60" Name="btDocumentation" Margin=" 0 10 0 10" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}" Click="btDocumentation_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/documentation.jpg"/>
+                    </Button.Background>
+
+                </Button>
+                <Button ToolTip="Admin Panel" Width="200" Height="60" Name="btnAdmin" Margin=" 0 10 0 10" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}" Click="btnAdmin_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/admin.jpg"/>
+                    </Button.Background>
+
+                </Button>
+                <Button ToolTip="Maps" Width="200" Height="60" Name="btnMaps" Margin=" 0 10 0 10" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}" Click="btnMaps_Click_1" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/maps.jpg"/>
+                    </Button.Background>
+
+                </Button>
+                <Button ToolTip="Chrome" Width="200" Height="60" Margin=" 0 10 0 10" Click="Button_Click_1" Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/browser.jpg"/>
+                    </Button.Background>
+
+                </Button>
+
+                <Button ToolTip="Logs/Errors" Width="200" Height="60" Margin=" 0 10 0 10"   Command="{x:Static materialDesign:DrawerHost.CloseDrawerCommand}" Click="Button_Click_3">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/error.ico"/>
+                    </Button.Background>
+
+                </Button>
+
+            </StackPanel>
+        </materialDesign:DrawerHost.LeftDrawerContent>
+
+
+        <Grid Margin="0,0,6,6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="89*"/>
+                <RowDefinition Height="91*"/>
+            </Grid.RowDefinitions>
+
+            <wpf:ColorZone Padding="16" 
+			wpf:ShadowAssist.ShadowDepth="Depth2"
+			Mode="PrimaryMid"
+			Background="#FF02ADEC">
+
+                <DockPanel>
+                    <wpf:PopupBox DockPanel.Dock="Right"  
+					PlacementMode="BottomAndAlignRightEdges" 
+					StaysOpen="False">
+                        <StackPanel Background="Beige" >
+                            <Button Content="Help"
+                                ToolTip="Help content" Click="Button_Click_4"
+                                />
+                            <Button Content="About"
+                                ToolTip="Http:\\www.csharpgrenades.co.za"
+                                />
+                            <Button Content="Exit" 
+                                ToolTip="Exit application"
+                                Click="Logout_Click"
+                                />
+                        </StackPanel>
+                    </wpf:PopupBox>
+
+                    <StackPanel Orientation="Vertical"
+					wpf:RippleAssist.IsCentered="True">
+                        <Button ToolTip="Open Drawer" Background="Transparent" x:Name="MenuToggleButton"  Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}">
+                            <materialDesign:PackIcon Kind="Menu" />
+                        </Button>
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Text="{Binding SelectedActivity.ToolbarTitle}" VerticalAlignment="Center"  Margin="16 0 0 0" DockPanel.Dock="Left"/>
+
+                </DockPanel>
+            </wpf:ColorZone>
+
+
+            <materialDesign:ColorZone Margin="10,69,0,0" Height="660" Background="Purple" 
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="4" Grid.RowSpan="2">
+                <Frame x:Name="MainFrameWindow" NavigationUIVisibility="Hidden"/>
+            </materialDesign:ColorZone>
+
+        </Grid>
+    </materialDesign:DrawerHost>
+
+</Controls:MetroWindow>
+

@@ -1,0 +1,44 @@
+﻿<Window x:Class="CSharpGrenadesGASource.PL.NumberOfItems"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpGrenadesGASource"
+        mc:Ignorable="d"
+        Topmost="True"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        BorderBrush="Transparent"
+        Title="Number of items" Height="296.5" Width="473">
+
+    <Grid Margin="0,0,10,0" >
+
+
+        <materialDesign:ColorZone  Height="271" Background="#FF2397F3 " Margin="11,15,0,0"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="7">
+            <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}" x:Name="txtNumberOfItems" Background="White" 
+        		Margin="148,66,200,169">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                        <TextBlock Text="" Width="106"/>
+
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+
+
+        </materialDesign:ColorZone>
+        <Button x:Name="btnCancelNoItems" Content="Cancel" HorizontalAlignment="Left" Margin="64,205,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.092,0.578" Click="btnCancelNoItems_Click"/>
+        <Button x:Name="btnSubmitNoItems" Content="Order" HorizontalAlignment="Left" Margin="348,205,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="-0.178,0.484" Click="btnSubmitNoItems_Click"/>
+        <Label x:Name="label" Content="Number of items :" HorizontalAlignment="Left" Margin="56,92,0,0" VerticalAlignment="Top"/>
+        <materialDesign:Snackbar Width="1000" Margin="20 0 0 0" IsActive="False"
+                                              x:Name="SnackbarItems" >
+            <materialDesign:SnackbarMessage Content="Hello 2"/>
+        </materialDesign:Snackbar>
+        <Label x:Name="label_Copy" Content="Order Selected Item Quantity" FontFamily="RobotoFonts" FontSize="30" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

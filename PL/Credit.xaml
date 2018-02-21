@@ -1,0 +1,78 @@
+﻿<Window x:Class="CSharpGrenadesGASource.PL.Credit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpGrenadesGASource"
+        mc:Ignorable="d"
+          Topmost="True"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="Register" Height="330" Width="650">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="135*"/>
+        </Grid.ColumnDefinitions>
+
+        <materialDesign:ColorZone  Height="300" Width="620" Background="#FF2397F3 " Margin="10,20,20,0"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="7" Grid.ColumnSpan="2">
+            <StackPanel  >
+
+                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" FontSize="18" TextWrapping="Wrap" Width="auto" FontWeight="Bold" HorizontalAlignment="Center">Credit Account</TextBlock>
+
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtAccountNumber" Background="White" 
+                 Margin="60 40 60 -20">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Account" />
+                            <TextBlock Text="Enter your Account Number"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+                <PasswordBox Name="txtPinCredit" Background="White" 
+                 Margin="60 40 60 -8">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Key" />
+                            <TextBlock Text="Enter your Pin"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </PasswordBox>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                		Margin="60,0,154,0"
+                		Width="auto"
+                		x:Name="btRegisterSubmit"
+                		ToolTip="Register your Credit account with us"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="REGISTER" Click="btRegisterSubmit_Click"/>
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                		Margin="-20,0,154,0"
+                		Width="auto"
+                		x:Name="btLoginToAccount"
+                		ToolTip="Resource name: Login to your account"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="LOGIN" Click="btRegisterCancel_Click"/>
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                		Margin="-10,0,154,0"
+                		Width="auto"
+                		x:Name="btRegisterCancel"
+                		ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="CANCEL" Click="btRegisterCancel_Click"/>
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+        </materialDesign:ColorZone>
+       
+    </Grid>
+</Window>

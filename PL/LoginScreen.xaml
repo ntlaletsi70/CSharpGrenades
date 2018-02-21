@@ -1,0 +1,90 @@
+﻿<Window x:Class="CSharpGrenadesGASource.PL.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpGrenadesGASource"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        BorderBrush="Transparent"
+        
+       
+        Title="LoginScreen" Height="640" Width="650">
+
+    <Grid >
+
+
+        <materialDesign:ColorZone  Height="610" Width="620" Background="#FF2397F3 " Margin="11,15,11,-1"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                  CornerRadius="7" Grid.ColumnSpan="2">
+            <StackPanel  >
+
+                <TextBlock Style="{StaticResource MaterialDesignDisplay1TextBlock}" FontSize="18" TextWrapping="Wrap" Width="auto" FontWeight="Bold" HorizontalAlignment="Center">Login Screen</TextBlock>
+
+                <materialDesign:ColorZone Mode="PrimaryLight" VerticalAlignment="Stretch" HorizontalAlignment="Center" Height="190" Width="190" Background="White" CornerRadius="20" Margin="60 10 60 20">
+                    <materialDesign:PackIcon Kind="AccountCircle" Height="190" Width="128"
+                                                 VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </materialDesign:ColorZone>
+
+                <TextBox  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Name="txtUserNameHome" Background="White" 
+                 Margin="60 40 60 8">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Account" />
+                            <TextBlock Text="Enter your Username"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </TextBox>
+
+
+
+                <PasswordBox   Name="txtUserPassword" Background="White"
+                Margin="60 20 60 10">
+                    <materialDesign:HintAssist.Hint>
+                        <StackPanel Orientation="Horizontal" Margin="-2 0 0 0">
+                            <materialDesign:PackIcon Kind="Key" />
+                            <TextBlock Text="Enter your Password"></TextBlock>
+
+                        </StackPanel>
+                    </materialDesign:HintAssist.Hint>
+                </PasswordBox>
+
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+
+
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                	    Margin="70,0,154,0"
+                		Width="auto"
+                		x:Name="btLogin"
+                		ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="LOGIN" Click="btLogin_Click"/>
+
+
+                    <Button Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                		Margin="160,0,154,0"
+                		Width="auto"
+                		x:Name="btSignUp"
+                        
+                		ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                		materialDesign:RippleAssist.Feedback="#DD000000" Content="SIGN UP" Click="btSignUp_Click"/>
+
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+        </materialDesign:ColorZone>
+        <Button x:Name="btnExit" Content="" HorizontalAlignment="Left" Margin="583,29,0,0" VerticalAlignment="Top" Width="40" Click="btnExit_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/CSharpGrenadesGASource;component/Images/close.jpg"/>
+            </Button.Background>
+        </Button>
+
+        <Frame x:Name="MainFrameWindow" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

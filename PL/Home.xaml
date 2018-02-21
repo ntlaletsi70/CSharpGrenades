@@ -1,0 +1,444 @@
+﻿<UserControl x:Class="CSharpGrenadesGASource.PL.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:geometry="clr-namespace:MaterialDesignThemes.Wpf.Transitions;assembly=MaterialDesignThemes.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="768"
+             MinWidth="1024" MinHeight="768">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Height="768" Width="1024" Margin="10 -50 0 0">
+
+
+
+
+        <!--Neo Walter Tlaletsi-->
+        <DockPanel HorizontalAlignment="Center"  LastChildFill="False" VerticalAlignment="Top" />
+
+
+        <geometry:TransitionerSlide>
+            <geometry:TransitionerSlide.BackwardWipe>
+                <geometry:CircleWipe />
+            </geometry:TransitionerSlide.BackwardWipe>
+        </geometry:TransitionerSlide>
+        <TextBlock Text="Meet our Development team" FontFamily="RobotoFonts" FontSize="30" 
+                 Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="291,32,349,700"/>
+        <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" 
+        	Margin="50,79,0,0"  
+        	Grid.Column="0" Height="293">
+
+
+            <materialDesign:Flipper.FrontContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="/CSharpGrenadesGASource;component/Images/neo.jpeg"  Stretch="Fill" />
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="Neo Tlaletsi"/></TextBlock>
+                        <Separator/>
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text=" 214105261"/></TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}"
+        					Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        					Margin="0 4 0 0"
+        					Content="MORE"
+                                />
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Flipper.FrontContent>
+            <materialDesign:Flipper.BackContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="Accent" Padding="6">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+        						Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        						HorizontalAlignment="Left">
+                                <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                            </Button>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center" FontSize="16"><Run Text="Software Engineer"/></TextBlock>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+        				Width="172">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <!--Role Description-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="16 0 16 8" 
+        					VerticalAlignment="Bottom" FontFamily="RobotoFonts" HorizontalAlignment="Center"><Run Text="He plays a key role in design, installation, and testing of software solutions:"/></TextBlock>
+
+                        <!--Facebook-->
+                        <Border Grid.Column="1" Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0 8 0 0">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+        							x:Name="FacebookButton" Click="FacebookButton_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Facebook" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Facebook"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!--Twitter-->
+                        <Border Grid.Column="1" Grid.Row="3" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+        							x:Name="TwitterButton" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Twitter" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Twitter"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </materialDesign:Flipper.BackContent>
+        </materialDesign:Flipper>
+        <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}"
+        	Margin="50,390,0,0"  VerticalAlignment="Top" Height="293">
+            <materialDesign:Flipper.FrontContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="/CSharpGrenadesGASource;component/Images/eddie.jpeg"  Stretch="Fill" />
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="Edwin Nkhatho"/></TextBlock>
+                        <Separator/>
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text=" 215065069"/></TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}"
+        					Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        					Margin="0 4 0 0"
+        					Content="MORE"
+                                />
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Flipper.FrontContent>
+            <materialDesign:Flipper.BackContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="Accent" Padding="6">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+        						Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        						HorizontalAlignment="Left">
+                                <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                            </Button>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center" FontSize="16"><Run Text="Software Architect"/></TextBlock>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+        				Width="172">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <!--Role Description-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="16 0 16 8" 
+        					VerticalAlignment="Bottom" FontFamily="RobotoFonts"><Run Text="He is responsible for creating appropriate architecture for a system"/></TextBlock>
+
+                        <!--Facebook-->
+                        <Border Grid.Column="1" Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0 8 0 0">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                            >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Facebook" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Facebook"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!--Twitter-->
+                        <Border Grid.Column="1" Grid.Row="3" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                            >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Twitter" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Twitter"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </materialDesign:Flipper.BackContent>
+        </materialDesign:Flipper>
+        <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" 
+        	Margin="703,79,0,0"
+        	Height="293">
+            <materialDesign:Flipper.FrontContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="/CSharpGrenadesGASource;component/Images/khanyi.jpg"  Stretch="Fill" />
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="Khanyiswa Mphikeleli"/></TextBlock>
+                        <Separator/>
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="     215102231"/></TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}"
+        					Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        					Margin="0 4 0 0"
+        					Content="MORE"
+                                />
+                    </StackPanel>
+                </Grid>
+
+
+            </materialDesign:Flipper.FrontContent>
+            <materialDesign:Flipper.BackContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="Accent" Padding="6">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+        						Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        						HorizontalAlignment="Left">
+                                <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                            </Button>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center" FontSize="16"><Run Text="Health IT Specialist"/></TextBlock>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+        				Width="172">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <!--Role Description-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="16 0 16 8" 
+        					VerticalAlignment="Bottom" FontFamily="RobotoFonts"><Run Text="She keeps track of recent trends and brings them to developemnt"/></TextBlock>
+
+                        <!--Facebook-->
+                        <Border Grid.Column="1" Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0 8 0 0">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                            >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Facebook" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Facebook"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!--Twitter-->
+                        <Border Grid.Column="1" Grid.Row="3" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                            >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Twitter" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Twitter"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </materialDesign:Flipper.BackContent>
+        </materialDesign:Flipper>
+        <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" 
+        	Margin="703,390,0,0"  VerticalAlignment="Top" 
+        	Height="293">
+            <materialDesign:Flipper.FrontContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="/CSharpGrenadesGASource;component/Images/john.jpg"  Stretch="Fill" />
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="John Nyareli"/></TextBlock>
+                        <Separator/>
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="  215019245"/></TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}"
+        					Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        					Margin="0 4 0 0"
+        					Content="MORE"
+                                />
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Flipper.FrontContent>
+            <materialDesign:Flipper.BackContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="Accent" Padding="6">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+        						Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        						HorizontalAlignment="Left">
+                                <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                            </Button>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center" FontSize="16"><Run Text="DataBase Admistrator"/></TextBlock>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+        				Width="172">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <!--Role Description-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="16 0 16 8" 
+        					VerticalAlignment="Bottom" FontFamily="RobotoFonts"><Run Text="He is responsible for all backend and security issues of the system"/></TextBlock>
+
+                        <!--Facebook-->
+                        <Border Grid.Column="1" Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0 8 0 0">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                           >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Facebook" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Facebook"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!--Twitter-->
+                        <Border Grid.Column="1" Grid.Row="3" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                            >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Twitter" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Twitter"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </materialDesign:Flipper.BackContent>
+        </materialDesign:Flipper>
+        <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" 
+        	VerticalAlignment="Top" 
+        	Height="293" Margin="390,218,0,0">
+            <materialDesign:Flipper.FrontContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="/CSharpGrenadesGASource;component/Images/noma.bmp"  Stretch="Fill" />
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="Nomake Shabangu"/></TextBlock>
+                        <Separator/>
+                        <TextBlock FontSize="14" FontFamily="RobotoFonts"><Run Text="    215065069"/></TextBlock>
+                        <Button Style="{StaticResource MaterialDesignFlatButton}"
+        					Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        					Margin="0 4 0 0"
+        					Content="MORE"
+                                />
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Flipper.FrontContent>
+            <materialDesign:Flipper.BackContent>
+                <Grid Height="350" Width="210">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone Mode="Accent" Padding="6">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Style="{StaticResource MaterialDesignToolForegroundButton}"
+        						Command="{x:Static materialDesign:Flipper.FlipCommand}"
+        						HorizontalAlignment="Left">
+                                <materialDesign:PackIcon Kind="ArrowLeft" HorizontalAlignment="Right" />
+                            </Button>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center" FontSize="16"><Run Text="System Analyst"/></TextBlock>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+                    <Grid Grid.Row="1" Margin="0 6 0 0" HorizontalAlignment="Center" VerticalAlignment="Top"
+        				Width="172">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <!--Role Description-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="14" TextWrapping="Wrap" Margin="16 0 16 8" 
+        					VerticalAlignment="Bottom" FontFamily="RobotoFonts"><Run Text="I analyse and specify user requirements of our system"/></TextBlock>
+
+                        <!--Facebook-->
+                        <Border Grid.Column="1" Grid.Row="2" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0 8 0 0">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                           >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Facebook" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Facebook"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+
+                        <!--Twitter-->
+                        <Border Grid.Column="1" Grid.Row="3" BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                            <Grid Margin="8">
+                                <Button Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Left"
+                                           >
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Twitter" />
+                                        <TextBlock Margin="8 0 0 0" VerticalAlignment="Center"><Run Text="Twitter"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </materialDesign:Flipper.BackContent>
+        </materialDesign:Flipper>
+
+    </Grid>
+</UserControl>
