@@ -19,6 +19,7 @@ namespace CSharpGrenadesGASource.DAL
         private XmlDocument xDoc; // Represents the XML document
         private XmlNode root; //Represents the root node
         CustomDialogOK ohk;
+    
 
 
         public ErrorXMLProvider()
