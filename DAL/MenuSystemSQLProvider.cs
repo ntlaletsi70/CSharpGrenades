@@ -70,7 +70,7 @@ namespace CSharpGrenadesGASource.DAL
 
             catch (SQLiteException ex)
             {
-                if (ex.ErrorCode == SQLiteErrorCode.Constraint)
+                if (ex.ErrorCode.Equals(SQLiteErrorCode.Constraint))
                 {
                     rc = -1;
                    // Error.WriteLine(ex);
@@ -142,7 +142,7 @@ namespace CSharpGrenadesGASource.DAL
 
             catch (SQLiteException ex)
             {
-                if (ex.ErrorCode == SQLiteErrorCode.Constraint)
+                if (ex.ErrorCode.Equals(SQLiteErrorCode.Constraint))
                 {
                     rc = -1;
                     logWriter.WriteToLog(ex.Message, ex);
@@ -205,7 +205,7 @@ namespace CSharpGrenadesGASource.DAL
 
             catch (SQLiteException ex)
             {
-                if (ex.ErrorCode == SQLiteErrorCode.Constraint)
+                if (ex.ErrorCode.Equals(SQLiteErrorCode.Constraint))
                 {
                     logWriter.WriteToLog(ex.Message, ex);
                     rc = -1;
@@ -261,7 +261,7 @@ namespace CSharpGrenadesGASource.DAL
 
             catch (SQLiteException ex)
             {
-                if (ex.ErrorCode == SQLiteErrorCode.Constraint)
+                if (ex.ErrorCode.Equals(SQLiteErrorCode.Constraint))
                 {
 
                     logWriter.WriteToLog(ex.Message, ex);
@@ -898,7 +898,7 @@ namespace CSharpGrenadesGASource.DAL
 
             catch (SQLiteException ex)
             {
-                if (ex.ErrorCode == SQLiteErrorCode.Constraint)
+                if (ex.ErrorCode.Equals(SQLiteErrorCode.Constraint))
                 {
 
                     logWriter.WriteToLog(ex.Message, ex);

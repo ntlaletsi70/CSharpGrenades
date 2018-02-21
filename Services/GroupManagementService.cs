@@ -13,7 +13,7 @@ namespace CSharpGrenadesGASource.Services
 
         private StudentDetail student;
 
-        private ProjectDetail projects;
+        //private ProjectDetail projects;
 
         public GroupManagementService(GroupDetail group, StudentDetail student,ProjectDetail project)
         {
