@@ -35,7 +35,7 @@
         <TextBlock Text="Meet our Development team" FontFamily="RobotoFonts" FontSize="30" 
                  Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="291,32,349,700"/>
 
-        <TextBlock Text="Lets take a close look at the things happening" FontFamily="RobotoFonts" FontSize="20" 
+        <TextBlock Text="This Project is beast" FontFamily="RobotoFonts" FontSize="20" 
                  Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="248,103,306,602" Height="63"/>
         <materialDesign:Flipper Style="{StaticResource MaterialDesignCardFlipper}" 
         	Margin="50,79,0,0"  
