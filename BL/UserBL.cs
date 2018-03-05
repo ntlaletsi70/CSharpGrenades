@@ -40,7 +40,7 @@ namespace CSharpGrenadesGASource.BL
             //              - The name of the data provider to use
             //Output      : None
             //
-            if (Provider.Equals("SQLProvider"))
+            if (Provider.Equals("XMLProvider"))
             {
                 providerBase = new SQLProvider();//set a new memory to the object,causes the PersonProviderBaseSQLite to execute
             }//end if
