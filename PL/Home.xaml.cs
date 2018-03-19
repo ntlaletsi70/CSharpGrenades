@@ -29,7 +29,7 @@ namespace CSharpGrenadesGASource.PL
 
         private void FacebookButton_Click(object sender, RoutedEventArgs e)
         {
-           // Process.Start("mailto://Innocentthekiso05@gmail.com");
+             Process.Start("https://www.facebook.com/neo.tlaletsi.5");
         }
     }
 }
